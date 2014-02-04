@@ -1,4 +1,4 @@
-android_vendor_google
+android_vendor_twixkat
 =====================
 
-Google Apps
+TwixApp
