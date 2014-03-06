@@ -34,6 +34,4 @@ PRODUCT_COPY_FILES += \
     vendor/twixkat/prebuilt/bin/su:system/xbin/daemonsu \
     vendor/twixkat/prebuilt/bin/su:system/xbin/su \
     vendor/twixkat/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/twixkat/prebuilt/apk/Superuser.apk:system/app/Superuser.apk \
-    vendor/twixkat/prebuilt/apk/TwixApp.apk:system/app/TwixApp.apk \
-    vendor/twixkat/prebuilt/apk/TwixLight.apk:system/app/TwixLight.apk
+    vendor/twixkat/prebuilt/apk/Superuser.apk:system/app/Superuser.apk
