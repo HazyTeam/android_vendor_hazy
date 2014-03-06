@@ -14,6 +14,7 @@
 
 # Google property overides
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.name=twixkat_mako \
     keyguard.no_require_sim=true \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
@@ -23,11 +24,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy
 
 # Override old AOSP defaults, we use (new) Google stock sounds
-#PRODUCT_PROPERTY_OVERRIDES += \
-    #ro.config.ringtone=Titania.ogg \
-    #ro.config.notification_sound=Tethys.ogg \
-    #ro.config.alarm_alert=Osmium.ogg
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.ringtone=Kuma.ogg \
+    ro.config.notification_sound=tweeters.ogg \
+    ro.config.alarm_alert=Osmium.ogg
 
 # Enable SIP+VoIP
-#PRODUCT_COPY_FILES += \
-    #frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml

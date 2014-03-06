@@ -1,8 +1,18 @@
 # GApps and TwixKat vendor dependencies
 PRODUCT_COPY_FILES += \
+    vendor/twixkat/prebuilt/apk/Superuser.apk:system/app/Superuser.apk:google \
+    vendor/twixkat/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions:google \
+    vendor/twixkat/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh:google \
+    vendor/twixkat/prebuilt/bin/su:system/xbin/daemonsu:google \
+    vendor/twixkat/prebuilt/bin/su:system/xbin/su:google \
+    vendor/twixkat/prebuilt/bin/sysinit:system/bin/sysinit:google \
+    vendor/twixkat/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip:google \
+    vendor/twixkat/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinitgoogle:google \
+    vendor/twixkat/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon:google \
+    vendor/twixkat/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml:google \
     vendor/twixkat/proprietary/system/addon.d/70-gapps.sh:system/addon.d/70-gapps.sh:google \
     vendor/twixkat/proprietary/system/app/TwixApp.apk:system/app/TwixApp.apk:google \
-    vendor/twixkat/proprietary/system/app/TwixLight.apk:system/app/TwixApp.apk:google \
+    vendor/twixkat/proprietary/system/app/TwixLight.apk:system/app/TwixLight.apk:google \
     vendor/twixkat/proprietary/system/etc/g.prop:system/etc/g.prop:google \
     vendor/twixkat/proprietary/system/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml:google \
     vendor/twixkat/proprietary/system/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml:google \
@@ -112,11 +122,10 @@ PRODUCT_PACKAGES += \
     Phonesky \
     PrebuiltGmsCore \
     SetupWizard \
+	Superuser \
     TwixApp \
     TwixLight \
     Velvet \
     Videos \
 
 $(call inherit-product, vendor/twixkat/configs/aosp_fixes.mk)
-$(call inherit-product, vendor/twixkat/configs/system.mk)
-$(call inherit-product, vendor/twixkat/configs/bootanimation.mk)
