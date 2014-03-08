@@ -104,7 +104,6 @@ PRODUCT_PACKAGES += \
     CloudPrint2.apk \
     ConfigUpdater \
     GalleryGoogle \
-    GenieWidget \
     GoogleBackupTransport \
     GoogleContactsSyncAdapter \
     GoogleEars \
