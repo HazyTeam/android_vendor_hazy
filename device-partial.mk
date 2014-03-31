@@ -6,7 +6,6 @@ PRODUCT_COPY_FILES += \
     vendor/twixkat/prebuilt/bin/su:system/xbin/daemonsu:google \
     vendor/twixkat/prebuilt/bin/su:system/xbin/su:google \
     vendor/twixkat/prebuilt/bin/sysinit:system/bin/sysinit:google \
-    vendor/twixkat/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip:google \
     vendor/twixkat/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinitgoogle:google \
     vendor/twixkat/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon:google \
     vendor/twixkat/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml:google \
@@ -128,3 +127,4 @@ PRODUCT_PACKAGES += \
     Videos \
 
 $(call inherit-product, vendor/twixkat/configs/aosp_fixes.mk)
+$(call inherit-product, vendor/twixkat/configs/bootanimation.mk)
