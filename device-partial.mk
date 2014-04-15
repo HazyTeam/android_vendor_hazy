@@ -9,9 +9,11 @@ PRODUCT_COPY_FILES += \
     vendor/twixkat/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinitgoogle:google \
     vendor/twixkat/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon:google \
     vendor/twixkat/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml:google \
+    vendor/twixkat/prebuilt/etc/install-recovery.sh:system/etc/install-recovery.sh:google \
     vendor/twixkat/proprietary/system/addon.d/70-gapps.sh:system/addon.d/70-gapps.sh:google \
     vendor/twixkat/proprietary/system/app/TwixApp.apk:system/app/TwixApp.apk:google \
     vendor/twixkat/proprietary/system/app/TwixLight.apk:system/app/TwixLight.apk:google \
+    vendor/twixkat/proprietary/system/app/TwixVoice.apk:system/app/TwixVoice.apk:google \
     vendor/twixkat/proprietary/system/etc/g.prop:system/etc/g.prop:google \
     vendor/twixkat/proprietary/system/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml:google \
     vendor/twixkat/proprietary/system/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml:google \
@@ -123,6 +125,7 @@ PRODUCT_PACKAGES += \
 	Superuser \
     TwixApp \
     TwixLight \
+    TwixVoice \
     Velvet \
     Videos \
 
