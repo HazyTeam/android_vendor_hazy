@@ -13,6 +13,7 @@ PRODUCT_COPY_FILES += \
     vendor/twixkat/proprietary/system/addon.d/70-gapps.sh:system/addon.d/70-gapps.sh:google \
     vendor/twixkat/proprietary/system/app/TwixApp.apk:system/app/TwixApp.apk:google \
     vendor/twixkat/proprietary/system/app/TwixLight.apk:system/app/TwixLight.apk:google \
+    vendor/twixkat/proprietary/system/app/TwixPaper.apk:system/app/TwixPaper.apk:google \
     vendor/twixkat/proprietary/system/app/TwixVoice.apk:system/app/TwixVoice.apk:google \
     vendor/twixkat/proprietary/system/etc/g.prop:system/etc/g.prop:google \
     vendor/twixkat/proprietary/system/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml:google \
@@ -125,6 +126,7 @@ PRODUCT_PACKAGES += \
 	Superuser \
     TwixApp \
     TwixLight \
+    TwixPaper \
     TwixVoice \
     Velvet \
     Videos \
