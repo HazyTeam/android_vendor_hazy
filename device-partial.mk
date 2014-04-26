@@ -1,14 +1,9 @@
 # GApps and TwixKat vendor dependencies
 PRODUCT_COPY_FILES += \
     vendor/twixkat/prebuilt/apk/Superuser.apk:system/app/Superuser.apk:google \
-    vendor/twixkat/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions:google \
-    vendor/twixkat/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh:google \
     vendor/twixkat/prebuilt/bin/su:system/xbin/daemonsu:google \
     vendor/twixkat/prebuilt/bin/su:system/xbin/su:google \
-    vendor/twixkat/prebuilt/bin/sysinit:system/bin/sysinit:google \
-    vendor/twixkat/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinitgoogle:google \
     vendor/twixkat/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon:google \
-    vendor/twixkat/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml:google \
     vendor/twixkat/prebuilt/etc/install-recovery.sh:system/etc/install-recovery.sh:google \
     vendor/twixkat/proprietary/system/addon.d/70-gapps.sh:system/addon.d/70-gapps.sh:google \
     vendor/twixkat/proprietary/system/app/TwixApp.apk:system/app/TwixApp.apk:google \
@@ -132,4 +127,3 @@ PRODUCT_PACKAGES += \
     Videos \
 
 $(call inherit-product, vendor/twixkat/configs/aosp_fixes.mk)
-$(call inherit-product, vendor/twixkat/configs/bootanimation.mk)
