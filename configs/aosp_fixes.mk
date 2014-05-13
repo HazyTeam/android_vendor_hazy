@@ -14,7 +14,7 @@
 
 # Google property overides
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.name=twixkat_mako \
+    ro.product.name=hazy \
     keyguard.no_require_sim=true \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \

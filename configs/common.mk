@@ -1,11 +1,11 @@
-PRODUCT_BRAND ?= twix
+PRODUCT_BRAND ?= hazy
 
 # Add TwixKat bootanimation based on device resolution
-ifneq ($(filter twix_i9300 full_mako full_maguro full_toro full_toroplus full_grouper full_tilapia,$(TARGET_PRODUCT)),)
+ifneq ($(filter hazy_i9300 hazy_mako full_maguro full_toro full_toroplus full_grouper full_tilapia,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/twixkat/prebuilt/bootanimation/1280x720.zip:system/media/bootanimation.zip
 endif
-ifeq (full_hammerhead,$(TARGET_PRODUCT))
+ifeq (hazy_hammerhead,$(TARGET_PRODUCT))
     PRODUCT_COPY_FILES += \
         vendor/twixkat/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
 endif
@@ -56,9 +56,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/twixkat/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-# Init script file with twix extras
+# Init script file with hazy extras
 PRODUCT_COPY_FILES += \
-    vendor/twixkat/prebuilt/etc/init.local.rc:root/init.twix.rc
+    vendor/twixkat/prebuilt/etc/init.local.rc:root/init.hazy.rc
 
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \

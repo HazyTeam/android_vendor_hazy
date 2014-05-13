@@ -14,11 +14,11 @@ ifdef BUILDTYPE_RELEASE
 endif
 
 ifndef ROM_BUILDTYPE
-    ROM_BUILDTYPE := HOMEMADE
+    ROM_BUILDTYPE := ALPHA
 endif
 
 TARGET_PRODUCT_SHORT := $(TARGET_PRODUCT)
-TARGET_PRODUCT_SHORT := $(subst twix_,,$(TARGET_PRODUCT_SHORT))
+TARGET_PRODUCT_SHORT := $(subst hazy_,,$(TARGET_PRODUCT_SHORT))
 
 # Build the final version string
 ifdef BUILDTYPE_RELEASE
@@ -33,5 +33,5 @@ endif
 
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=TwixROM-$(ROM_VERSION) \
-    ro.twix.version=$(ROM_VERSION)
+    ro.modversion=hazyROM-$(ROM_VERSION) \
+    ro.hazy.version=$(ROM_VERSION)
