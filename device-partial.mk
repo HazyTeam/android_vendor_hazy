@@ -9,7 +9,6 @@ PRODUCT_COPY_FILES += \
     vendor/twixkat/proprietary/system/app/TwixLight.apk:system/app/TwixLight.apk:google \
     vendor/twixkat/proprietary/system/app/TwixPaper.apk:system/app/TwixPaper.apk:google \
     vendor/twixkat/proprietary/system/app/TwixVoice.apk:system/app/TwixVoice.apk:google \
-    vendor/twixkat/proprietary/system/etc/g.prop:system/etc/g.prop:google \
 
 PRODUCT_PACKAGES += \
 	Superuser \
