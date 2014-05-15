@@ -33,5 +33,5 @@ endif
 
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=HazyROM-$(ROM_VERSION) \
-    ro.hazy.version=HazyROM-$(ROM_BUILDTYPE)
+    ro.modversion=Hazy3-$(ROM_VERSION) \
+    ro.hazy.version=Hazy3-$(ROM_BUILDTYPE)
