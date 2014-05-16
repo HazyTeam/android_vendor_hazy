@@ -5,14 +5,14 @@ PRODUCT_COPY_FILES += \
     vendor/twixkat/prebuilt/bin/su:system/xbin/su:google \
     vendor/twixkat/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon:google \
     vendor/twixkat/prebuilt/etc/install-recovery.sh:system/etc/install-recovery.sh:google \
-    vendor/twixkat/proprietary/system/app/TwixApp.apk:system/app/TwixApp.apk:google \
+    vendor/twixkat/proprietary/system/app/HazyApp.apk:system/app/HazyApp.apk:google \
     vendor/twixkat/proprietary/system/app/TwixLight.apk:system/app/TwixLight.apk:google \
     vendor/twixkat/proprietary/system/app/TwixPaper.apk:system/app/TwixPaper.apk:google \
     vendor/twixkat/proprietary/system/app/TwixVoice.apk:system/app/TwixVoice.apk:google \
 
 PRODUCT_PACKAGES += \
 	Superuser \
-    TwixApp \
+    HazyApp \
     TwixLight \
     TwixPaper \
     TwixVoice \
