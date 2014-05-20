@@ -8,13 +8,13 @@ PRODUCT_COPY_FILES += \
     vendor/twixkat/proprietary/system/app/HazyApp.apk:system/app/HazyApp.apk:google \
     vendor/twixkat/proprietary/system/app/TwixLight.apk:system/app/TwixLight.apk:google \
     vendor/twixkat/proprietary/system/app/TwixPaper.apk:system/app/TwixPaper.apk:google \
-    vendor/twixkat/proprietary/system/app/TwixVoice.apk:system/app/TwixVoice.apk:google \
+    vendor/twixkat/proprietary/system/app/HazyVoice.apk:system/app/HazyVoice.apk:google \
 
 PRODUCT_PACKAGES += \
 	Superuser \
     HazyApp \
     TwixLight \
     TwixPaper \
-    TwixVoice \
+    HazyVoice \
 
 $(call inherit-product, vendor/twixkat/configs/aosp_fixes.mk)
