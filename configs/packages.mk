@@ -2,7 +2,7 @@
 PRODUCT_PACKAGES += \
     Basic \
     Development \
-    LatinIME \
+    HazyKeyboard \
     SoundRecorder \
     VideoEditor
 
