@@ -2,15 +2,13 @@
 PRODUCT_PACKAGES += \
     Basic \
     Development \
-    HazyKeyboard \
-    SoundRecorder \
-    VideoEditor
+    HazyKeyboard
 
 # Additional apps
 PRODUCT_PACKAGES += \
     audio_effects.conf \
-    DSPManager \
-    libcyanogen-dsp
+    Music \
+	MusicFX
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
