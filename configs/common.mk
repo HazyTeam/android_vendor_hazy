@@ -5,7 +5,7 @@ ifneq ($(filter hazy_i9300 hazy_mako hazy_maguro full_toro full_toroplus full_gr
     PRODUCT_COPY_FILES += \
         vendor/twixkat/prebuilt/bootanimation/1280x720.zip:system/media/bootanimation.zip
 endif
-ifeq (hazy_hammerhead hazy_bacon,$(TARGET_PRODUCT))
+ifneq ($(filter hazy_hammerhead hazy_bacon,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/twixkat/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
 endif
