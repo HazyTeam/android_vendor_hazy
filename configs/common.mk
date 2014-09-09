@@ -1,7 +1,7 @@
 PRODUCT_BRAND ?= hazy
 
 # Add TwixKat bootanimation based on device resolution
-ifneq ($(filter hazy_i9300 hazy_mako hazy_maguro full_toro full_toroplus full_grouper full_tilapia,$(TARGET_PRODUCT)),)
+ifneq ($(filter hazy_i9300 hazy_mako hazy_maguro hazy_p3100 full_toro full_toroplus full_grouper full_tilapia,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/twixkat/prebuilt/bootanimation/1280x720.zip:system/media/bootanimation.zip
 endif
