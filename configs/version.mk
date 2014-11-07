@@ -34,4 +34,5 @@ endif
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=Hazy4.0-$(ROM_VERSION) \
-    ro.hazy.version=Hazy4.0-$(ROM_BUILDTYPE)
+    ro.hazy.version=Hazy4.0-$(ROM_BUILDTYPE) \
+    ro.hazy.date=$(shell date -u +%Y-%m-%d)
