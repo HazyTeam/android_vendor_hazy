@@ -2,7 +2,7 @@
 PRODUCT_PACKAGES += \
     Basic \
     Development \
-    HazyKeyboard
+    LatinIME
 
 # Additional apps
 PRODUCT_PACKAGES += \
