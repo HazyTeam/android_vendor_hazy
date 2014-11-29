@@ -18,14 +18,6 @@ endif
 #        vendor/hazy/prebuilt/bootanimation/2560x1600.zip:system/media/bootanimation.zip
 # endif
 
-ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-google
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
-endif
-
 # general properties
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -36,17 +28,56 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     persist.sys.root_access=1
 
-# enable ADB authentication if not on eng build
+ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=android-google
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
+endif
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
+# Disable multithreaded dexopt by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.dalvik.multithread=false
+
+# Thank you, please drive thru!
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
+
 ifneq ($(TARGET_BUILD_VARIANT),eng)
+# Enable ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
+# CM Hardware Abstraction Framework
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
+
+# Extra packages
+PRODUCT_PACKAGES += \
+    BluetoothExt
+
+# Stagefright FFMPEG plugin
+PRODUCT_PACKAGES += \
+    libstagefright_soft_ffmpegadec \
+    libstagefright_soft_ffmpegvdec \
+    libFFmpegExtractor \
+    libnamparser
+
+# Chromium Prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+-include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
+endif
+
 # Backup Tool
-PRODUCT_COPY_FILES += \
-    vendor/hazy/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/hazy/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/hazy/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-    vendor/hazy/prebuilt/bin/blacklist:system/addon.d/blacklist
+#PRODUCT_COPY_FILES += \
+#    vendor/hazy/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+#    vendor/hazy/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+#    vendor/hazy/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
+#    vendor/hazy/prebuilt/bin/blacklist:system/addon.d/blacklist
 
 # init.d support
 PRODUCT_COPY_FILES += \
