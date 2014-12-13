@@ -8,7 +8,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio_effects.conf \
     Music \
-	AudioFX
+	MusicFX
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
