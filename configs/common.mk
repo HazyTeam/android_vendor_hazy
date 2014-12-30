@@ -98,6 +98,11 @@ PRODUCT_COPY_FILES += \
 # Additional packages
 -include vendor/hazy/configs/packages.mk
 
+# Add Hazy packages
+PRODUCT_COPY_FILES += \
+    vendor/hazy/proprietary/system/app/HazyCenter_test.apk:system/app/HazyCenter.apk \
+    vendor/hazy/proprietary/system/app/HazyWalls.apk:system/app/HazyWalls.apk
+   
 # Versioning
 -include vendor/hazy/configs/version.mk
 
