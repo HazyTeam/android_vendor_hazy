@@ -2,7 +2,8 @@
 PRODUCT_PACKAGES += \
     Basic \
     Development \
-    LatinIME
+    LatinIME \
+    Superuser
 
 # Additional apps
 PRODUCT_PACKAGES += \
@@ -30,5 +31,6 @@ PRODUCT_PACKAGES += \
     vim \
     ntfsfix \
     ntfs-3g \
-    mkntfs
-
+    mkntfs \
+    su \
+    deamonsu
