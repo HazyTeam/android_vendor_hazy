@@ -101,10 +101,10 @@ PRODUCT_COPY_FILES += \
 # Add Hazy packages
 PRODUCT_COPY_FILES += \
     vendor/hazy/proprietary/system/app/HazyCenter.apk:system/app/HazyCenter/HazyCenter.apk \
-    vendor/hazy/proprietary/system/app/HazyWalls.apk:system/app/HazyWalls/HazyWalls.apk \
-    vendor/hazy/prebuilt/system/apk/Superuser.apk:system/app/Superuser/Superuser.apk \
-    vendor/hazy/prebuilt/system/bin/su.apk:system/xbin/su \
-    vendor/hazy/prebuilt/system/bin/su.apk:system/xbin/deamonsu
+    vendor/hazy/proprietary/system/app/HazyWalls.apk:system/app/HazyWalls/HazyWalls.apk
+    # vendor/hazy/prebuilt/system/apk/Superuser.apk:system/app/Superuser/Superuser.apk \
+    # vendor/hazy/prebuilt/system/bin/su.apk:system/xbin/su \
+    # vendor/hazy/prebuilt/system/bin/su.apk:system/xbin/deamonsu
 
 # Versioning
 -include vendor/hazy/configs/version.mk
