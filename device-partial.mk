@@ -6,14 +6,14 @@ PRODUCT_COPY_FILES += \
     vendor/hazy/prebuilt/bin/supolicy:system/xbin/supolicy:google \
 #    vendor/hazy/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon:google \
     vendor/hazy/prebuilt/etc/install-recovery.sh:system/etc/install-recovery.sh:google \
-    vendor/hazy/proprietary/system/app/HazyCenter_test.apk:system/app/HazyCenter_test.apk:google \
+    vendor/hazy/proprietary/system/app/HazyCenter.apk:system/app/HazyCenter.apk:google \
 #    vendor/hazy/proprietary/system/app/HazyLight.apk:system/app/HazyLight.apk:google \
     vendor/hazy/proprietary/system/app/HazyWalls.apk:system/app/HazyWalls.apk:google \
 #    vendor/hazy/proprietary/system/app/HazyVoice.apk:system/app/HazyVoice.apk:google \
 
 PRODUCT_PACKAGES += \
 #	Superuser \
-    HazyCenter_test \
+    HazyCenter \
 #    HazyLight \
     HazyWalls \
 #    HazyVoice \
