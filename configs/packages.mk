@@ -3,13 +3,13 @@ PRODUCT_PACKAGES += \
     Basic \
     Development \
     LatinIME \
-    Superuser
+    SuperSU
 
 # Additional apps
 PRODUCT_PACKAGES += \
     audio_effects.conf \
     Music \
-	MusicFX
+    MusicFX
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
@@ -31,6 +31,5 @@ PRODUCT_PACKAGES += \
     vim \
     ntfsfix \
     ntfs-3g \
-    mkntfs \
-    su \
-    deamonsu
+    mkntfs
+

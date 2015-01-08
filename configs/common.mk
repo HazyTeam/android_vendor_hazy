@@ -101,10 +101,17 @@ PRODUCT_COPY_FILES += \
 # Add Hazy packages
 PRODUCT_COPY_FILES += \
     vendor/hazy/proprietary/system/app/HazyCenter.apk:system/app/HazyCenter/HazyCenter.apk \
-    vendor/hazy/proprietary/system/app/HazyWalls.apk:system/app/HazyWalls/HazyWalls.apk
-    # vendor/hazy/prebuilt/system/apk/Superuser.apk:system/app/Superuser/Superuser.apk \
-    # vendor/hazy/prebuilt/system/bin/su.apk:system/xbin/su \
-    # vendor/hazy/prebuilt/system/bin/su.apk:system/xbin/deamonsu
+    vendor/hazy/proprietary/system/app/HazyWalls.apk:system/app/HazyWalls/HazyWalls.apk \
+    vendor/hazy/proprietary/system/app/Superuser.apk:system/app/SuperSU/SuperSU.apk \
+    vendor/hazy/proprietary/system/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+    vendor/hazy/proprietary/system/etc/install-recovery.sh:system/etc/install-recovery.sh \
+    vendor/hazy/proprietary/system/etc/install-recovery.sh:system/bin/install-recovery.sh \
+    vendor/hazy/proprietary/system/bin/supolicy:system/xbin/supolicy \
+    vendor/hazy/proprietary/system/bin/su:system/xbin/su \
+    vendor/hazy/proprietary/system/bin/su:system/xbin/sugote \
+    vendor/hazy/proprietary/system/bin/su:system/xbin/deamonsu \
+    vendor/hazy/proprietary/system/bin/sh:system/xbin/sugote-mksh \
+    vendor/hazy/proprietary/system/lib/libsupol.so:system/lib/libsupol.so
 
 # Versioning
 -include vendor/hazy/configs/version.mk
