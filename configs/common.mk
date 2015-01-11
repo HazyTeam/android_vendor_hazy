@@ -111,7 +111,8 @@ PRODUCT_COPY_FILES += \
     vendor/hazy/proprietary/system/bin/su:system/xbin/sugote \
     vendor/hazy/proprietary/system/bin/su:system/xbin/deamonsu \
     vendor/hazy/proprietary/system/bin/sh:system/xbin/sugote-mksh \
-    vendor/hazy/proprietary/system/lib/libsupol.so:system/lib/libsupol.so
+    vendor/hazy/proprietary/system/lib/libsupol.so:system/lib/libsupol.so \
+    vendor/hazy/proprietary/system/media:system/media
 
 # Versioning
 -include vendor/hazy/configs/version.mk

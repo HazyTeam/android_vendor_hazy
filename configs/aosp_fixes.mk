@@ -25,8 +25,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Override old AOSP defaults, we use (new) Google stock sounds
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Kuma.ogg \
-    ro.config.notification_sound=tweeters.ogg \
+    ro.config.ringtone=Sedna.ogg \
+    ro.config.notification_sound=Elara.ogg \
     ro.config.alarm_alert=Osmium.ogg
 
 # Enable SIP+VoIP
