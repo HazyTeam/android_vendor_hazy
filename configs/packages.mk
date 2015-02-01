@@ -9,7 +9,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio_effects.conf \
     Music \
-    MusicFX
+    AudioFX
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver
@@ -31,5 +31,6 @@ PRODUCT_PACKAGES += \
     vim \
     ntfsfix \
     ntfs-3g \
+    su \
     mkntfs
 
