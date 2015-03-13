@@ -14,7 +14,7 @@ ifdef BUILDTYPE_RELEASE
 endif
 
 ifndef ROM_BUILDTYPE
-    ROM_BUILDTYPE := Alpha2
+    ROM_BUILDTYPE := Alpha1
 endif
 
 TARGET_PRODUCT_SHORT := $(TARGET_PRODUCT)
@@ -33,6 +33,6 @@ endif
 
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=Hazy4.0-$(ROM_VERSION) \
-    ro.hazy.version=Hazy4.0-$(ROM_BUILDTYPE) \
+    ro.modversion=Hazy4.1-$(ROM_VERSION) \
+    ro.hazy.version=Hazy4.1-$(ROM_BUILDTYPE) \
     ro.hazy.date=$(shell date -u +%Y-%m-%d)
