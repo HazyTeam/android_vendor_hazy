@@ -102,6 +102,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/hazy/proprietary/system/app/HazyCenter.apk:system/app/HazyCenter/HazyCenter.apk \
     vendor/hazy/proprietary/system/app/HazyWalls.apk:system/app/HazyWalls/HazyWalls.apk \
+    vendor/hazy/proprietary/system/app/HManager.apk:system/app/HManager/HManager.apk \
     vendor/hazy/proprietary/system/app/Superuser.apk:system/app/SuperSU/SuperSU.apk \
     vendor/hazy/proprietary/system/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
     vendor/hazy/proprietary/system/etc/install-recovery.sh:system/etc/install-recovery.sh \

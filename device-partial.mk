@@ -14,6 +14,7 @@ PRODUCT_COPY_FILES += \
 #    vendor/hazy/proprietary/system/app/HazyLight.apk:system/app/HazyLight.apk:google \
     vendor/hazy/proprietary/system/app/HazyWalls.apk:system/app/HazyWalls/HazyWalls.apk:google \
 #    vendor/hazy/proprietary/system/app/HazyVoice.apk:system/app/HazyVoice.apk:google \
+    vendor/hazy/proprietary/system/app/HManager.apk:system/app/HManager/HManager.apk:google \
 
 PRODUCT_PACKAGES += \
     SuperSU \
@@ -21,5 +22,6 @@ PRODUCT_PACKAGES += \
 #    HazyLight \
     HazyWalls \
 #    HazyVoice \
+    HManager \
 
 $(call inherit-product, vendor/hazy/configs/aosp_fixes.mk)
