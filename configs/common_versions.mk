@@ -1,0 +1,14 @@
+# Version information used on all builds
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=LMY47I BUILD_ID=LMY47I BUILD_VERSION_TAGS=release-keys BUILD_UTC_DATE=0
+
+# Versioning System
+PRODUCT_VERSION_MAJOR = 4
+PRODUCT_VERSION_MINOR = 1
+PRODUCT_VERSION_MAINTENANCE = Alpha1
+
+ROM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)-$(CUSTOM_BUILD)-$(shell date -u +%Y%m%d)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.hazy.version=$(ROM_VERSION) \
+  hazy.ota.version=$(shell date -u +%Y%m%d) \
+  ro.modversion=$(ROM_VERSION)
