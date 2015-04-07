@@ -115,6 +115,10 @@ PRODUCT_COPY_FILES += \
     vendor/hazy/proprietary/system/lib/libsupol.so:system/lib/libsupol.so \
     vendor/hazy/proprietary/system/media:system/media
 
+# Copy latinime for gesture typing
+PRODUCT_COPY_FILES += \
+    vendor/hazy/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
 # Versioning
 -include vendor/hazy/configs/version.mk
 
