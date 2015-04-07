@@ -45,14 +45,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/hazy/prebuilt/common/etc/init.hazy.rc:root/init.hazy.rc
 
-# Copy Hazy app
-PRODUCT_COPY_FILES += \
-    vendor/hazy/prebuilt/common/app/HazyCenter.apk:system/app/HazyCenter.apk \
-    vendor/hazy/prebuilt/common/app/HazyWalls.apk:system/app/HazyWalls.apk \
-    vendor/hazy/prebuilt/common/app/HManager.apk:system/app/HManager.apk \
-    vendor/hazy/prebuilt/common/app/HSidebar.apk:system/app/HSidebar.apk
-    
-
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
     vendor/hazy/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
@@ -69,7 +61,15 @@ PRODUCT_PACKAGES += \
     Development \
     Eleven \
     Launcher3 \
-    LockClock
+    LockClock \
+    OTACenter 
+
+# Copy Hazy app
+PRODUCT_COPY_FILES += \
+    vendor/hazy/prebuilt/common/app/HazyCenter.apk:system/app/HazyCenter.apk \
+    vendor/hazy/prebuilt/common/app/HazyWalls.apk:system/app/HazyWalls.apk \
+    vendor/hazy/prebuilt/common/app/HManager.apk:system/app/HManager.apk \
+    vendor/hazy/prebuilt/common/app/HSidebar.apk:system/app/HSidebar.apk
 
 # Extra tools
 PRODUCT_PACKAGES += \

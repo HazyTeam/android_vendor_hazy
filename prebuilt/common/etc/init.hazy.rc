@@ -1,7 +1,7 @@
-# Hazy Extras (thanks to Euphoria)
+# Euphoria-OS Extras
 
 # Koush's Superuser
-import /init.supersu.rc
+import /init.superuser.rc
 
 on init
     export ANDROID_CACHE /cache
