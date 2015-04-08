@@ -61,7 +61,6 @@ PRODUCT_PACKAGES += \
     Development \
     Eleven \
     Launcher3 \
-    LockClock \
     OTACenter 
 
 # Copy Hazy app
