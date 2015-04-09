@@ -59,7 +59,6 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     CustomWallpapers \
     Development \
-    Eleven \
     Launcher3 \
     OTACenter 
 
