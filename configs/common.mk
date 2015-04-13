@@ -91,9 +91,25 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/hazy/prebuilt/etc/init.local.rc:root/init.hazy.rc
 
-# Enable SIP and VoIP on all targets
+# Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+# Enable wireless Xbox 360 controller support
+PRODUCT_COPY_FILES += \
+    frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
+
+# World APN list
+PRODUCT_COPY_FILES += \
+    vendor/hazy/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+
+# World SPN overrides list
+PRODUCT_COPY_FILES += \
+    vendor/hazy/prebuilt/etc/spn-conf.xml:system/etc/spn-conf.xml
+
+# Selective SPN list for operator number who has the problem.
+PRODUCT_COPY_FILES += \
+    vendor/hazy/prebuilt/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
 # Additional packages
 -include vendor/hazy/configs/packages.mk
@@ -118,6 +134,14 @@ PRODUCT_COPY_FILES += \
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
     vendor/hazy/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
+# This device supports CM enhanced NFC
+PRODUCT_COPY_FILES += \
+    vendor/hazy/prebuilt/etc/permissions/com.cyanogenmod.nfc.enhanced.xml:system/etc/permissions/com.cyanogenmod.nfc.enhanced.xml
+
+# This is CM!
+PRODUCT_COPY_FILES += \
+    vendor/hazy/prebuilt/etc/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
 # Versioning
 -include vendor/hazy/configs/version.mk
