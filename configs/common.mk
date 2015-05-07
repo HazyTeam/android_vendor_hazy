@@ -1,11 +1,11 @@
 PRODUCT_BRAND ?= hazy
 
 # Add hazy bootanimation based on device resolution
-ifneq ($(filter hazy_i9300 hazy_mako hazy_maguro hazy_p3100 hazy_manta hazy_d802 hazy_i9100 full_toroplus full_grouper full_tilapia,$(TARGET_PRODUCT)),)
+ifneq ($(filter hazy_titan hazy_i9300 hazy_i9100 hazy_mako hazy_maguro hazy_p3100 hazy_manta hazy_d802 hazy_i9100 full_toroplus full_grouper full_tilapia,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/hazy/prebuilt/bootanimation/1280x720.zip:system/media/bootanimation.zip
 endif
-ifneq ($(filter hazy_shamu hazy_hammerhead hazy_bacon hazy_falcon hazy_m8,$(TARGET_PRODUCT)),)
+ifneq ($(filter hazy_find7 hazy_thea hazy_tomato hazy_n7100 hazy_armani hazy_shamu hazy_hammerhead hazy_bacon hazy_falcon hazy_m8,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/hazy/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
 endif
