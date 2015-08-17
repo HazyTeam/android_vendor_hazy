@@ -1,7 +1,6 @@
 # Inherit common Hazy stuff
 $(call inherit-product, vendor/hazy/configs/common.mk)
-# Bring in all video files
-$(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
+
 # Optional CM packages
 PRODUCT_PACKAGES += \
 Galaxy4 \
@@ -22,6 +21,7 @@ libvideoeditor_core \
 libvideoeditor_osal \
 libvideoeditor_videofilters \
 libvideoeditorplayer
+
 # Extra tools in CM
 PRODUCT_PACKAGES += \
 vim \

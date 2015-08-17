@@ -39,10 +39,6 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
-# Disable multithreaded dexopt by default
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.dalvik.multithread=false
-
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
@@ -76,14 +72,19 @@ ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 endif
 
 # Backup Tool
-#PRODUCT_COPY_FILES += \
-#    vendor/hazy/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-#    vendor/hazy/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-#    vendor/hazy/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-#    vendor/hazy/prebuilt/bin/blacklist:system/addon.d/blacklist
+PRODUCT_COPY_FILES += \
+    vendor/hazy/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/hazy/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/hazy/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
+    vendor/hazy/prebuilt/bin/blacklist:system/addon.d/blacklist
+
+# Signature compatibility validation
+PRODUCT_COPY_FILES += \
+    vendor/hazy/prebuilt/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
 # init.d support
 PRODUCT_COPY_FILES += \
+    vendor/hazy/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/hazy/prebuilt/bin/sysinit:system/bin/sysinit
 
 # userinit support
