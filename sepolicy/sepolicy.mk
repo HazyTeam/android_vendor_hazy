@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all products that
-# inherit from HAZY
+# inherit from Hazy
 #
 
 BOARD_SEPOLICY_DIRS += \
@@ -17,7 +17,6 @@ BOARD_SEPOLICY_UNION += \
     app.te \
     auditd.te \
     bootanim.te \
-    drmserver.te \
     healthd.te \
     hostapd.te \
     installd.te \
@@ -30,10 +29,7 @@ BOARD_SEPOLICY_UNION += \
     sysinit.te \
     system.te \
     system_app.te \
-    system_server.te \
     ueventd.te \
-    uncrypt.te \
-    userinit.te \
     vold.te \
     zygote.te \
     mac_permissions.xml

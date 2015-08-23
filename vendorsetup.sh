@@ -1,0 +1,8 @@
+add_lunch_combo hazy_flo-userdebug
+add_lunch_combo hazy_flounder-userdebug
+add_lunch_combo hazy_grouper-userdebug
+add_lunch_combo hazy_hammerhead-userdebug
+add_lunch_combo hazy_mako-userdebug
+add_lunch_combo hazy_manta-userdebug
+add_lunch_combo hazy_shamu-userdebug
+add_lunch_combo hazy_bacon-userdebug
