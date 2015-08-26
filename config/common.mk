@@ -1,4 +1,3 @@
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -26,6 +25,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
+
+# Allow override of system DUN settings
+# 2 = not set, 0 = DUN not required, 1 = DUN required
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
 # Disable excessive dalvik debug messages
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -58,6 +61,12 @@ PRODUCT_COPY_FILES += \
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+# Hazy apps
+PRODUCT_COPY_FILES += \
+    vendor/hazy/proprietary/system/app/HazyCenter.apk:system/app/HazyCenter/HazyCenter.apk \
+    vendor/hazy/proprietary/system/app/HazyWalls.apk:system/app/HazyWalls/HazyWalls.apk \
+    vendor/hazy/proprietary/system/app/HManager.apk:system/app/HManager/HManager.apk
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
@@ -93,10 +102,10 @@ endif
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     Apollo \
+    DU-About \
     LatinIME \
     BluetoothExt \
-    CalendarWidget \
-    LockClock
+    CalendarWidget
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -108,14 +117,12 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
 
-ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegadec \
     libstagefright_soft_ffmpegvdec \
     libFFmpegExtractor \
     libnamparser
-endif
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
@@ -152,9 +159,9 @@ PRODUCT_COPY_FILES += \
 
 # Versioning System
 ANDROID_VERSION = 5.1.1
-HAZY_VERSION = v4.1
-ifndef DU_BUILD_TYPE
-    DU_BUILD_TYPE := UNOFFICIAL
+HAZY_VERSION = 4.1
+ifndef HAZY_BUILD_TYPE
+    HAZY_BUILD_TYPE := UNOFFICIAL
     PLATFORM_VERSION_CODENAME := UNOFFICIAL
 endif
 
@@ -165,4 +172,4 @@ HAZY_MOD_VERSION := HAZY_$(HAZY_BUILD)_$(ANDROID_VERSION)_$(shell date -u +%Y%m%
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.hazy.version=$(HAZY_VERSION) \
-    ro.mod.version=$(HAZY_BUILD_TYPE)-v4.1 \
+    ro.mod.version=$(HAZY_BUILD_TYPE)-4.1
