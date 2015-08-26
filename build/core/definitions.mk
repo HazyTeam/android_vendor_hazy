@@ -173,7 +173,7 @@ $(MODULE_CACHE_PATH)/lib.so: $(__BUILT_MODULE) | $(ACP)
 	@mkdir -p $$(PRIVATE_MODULE_CACHE_PATH)
 	$$(hide) $(ACP) $$(PRIVATE_BUILT_MODULE) $$(PRIVATE_MODULE_CACHE_PATH)/lib.so
 	$$(hide) $(ACP) $$(PRIVATE_LINKED_MODULE) $$(PRIVATE_MODULE_CACHE_PATH)/symbols.so
-	$$(hide) vendor/du/tools/shlib-cache-enter \
+	$$(hide) vendor/hazy/tools/shlib-cache-enter \
 		"$$(PRIVATE_MODULE_CACHE_PATH)" \
 		"$$(PRIVATE_LOCAL_PATH)" \
 		"$$(PRIVATE_INTERMEDIATES_PATH)" \
